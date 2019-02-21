@@ -8,7 +8,7 @@ class Application
 
     @@items.each do |item|
 
-    if req.path.match("/items/item")
+    if req.path.match(/items/item)
       resp.write item.price
     end
    elsif !(@@items.include?(item))
