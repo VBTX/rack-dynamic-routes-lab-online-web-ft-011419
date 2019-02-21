@@ -8,11 +8,11 @@ class Application
 
     if req.path == "/items/#{item}"
       resp.write item.price
-    elsif !@@items.include?(item)
+    else !@@items.include?(item)
       resp.write "Item not found"
       resp.status = 400
-    else
-      resp.status = 404
+    # else
+    #   resp.status = 404
     end
   end
     resp.finish
