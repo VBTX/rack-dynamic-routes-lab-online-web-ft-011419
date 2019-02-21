@@ -3,8 +3,10 @@ class Application
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
+    @@items.each do |item|
+
     if req.path == "/items/#{item}"
-      resp.write @@item.price
+      resp.write item.price
     else
       resp.write ""
       resp.status = 404
