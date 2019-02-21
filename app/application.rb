@@ -1,10 +1,10 @@
 class Application
-  attr_accessor :item
+  @@items = []
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
 
-    @@items = []
+
 
     @@items.each do |item|
 
