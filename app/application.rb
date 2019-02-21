@@ -1,5 +1,5 @@
 class Application
-  attr_accessor :item
+  attr_accessor :item, :items
   def call(env)
     resp = Rack::Response.new
     req = Rack::Request.new(env)
